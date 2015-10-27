@@ -1,3 +1,20 @@
+/// Hashes a key into `0..num_buckets`.
+///
+/// JCH is a consistent hashing algorithm designed to minimise hash changes
+/// when `num_buckets` changes.
+///
+/// Described in John Lamping and Eric Veach's paper [A Fast, Minimal Memory,
+/// Consistent Hash Algorithm](http://arxiv.org/pdf/1406.2294.pdf).
+///
+/// # Examples
+///
+/// ```
+/// use jch;
+///
+/// let key = 5u64;
+/// let num_buckets = 1024i32;
+/// println!("{}", jch::hash(key, num_buckets));
+/// ```
 pub fn hash(key: u64, num_buckets: i32) -> i32 {
     let mut b: i64 = -1;
     let mut j: i64 = 0;

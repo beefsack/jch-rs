@@ -7,3 +7,13 @@ described in [John Lamping and Eric Veach's paper on the topic][2]
 
 [1]: https://en.wikipedia.org/wiki/Consistent_hashing "Consistent hashing, Wikipedia"
 [2]: http://arxiv.org/pdf/1406.2294.pdf "John Lamping, Eric Veach. A Fast, Minimal Memory, Consistent Hash Algorithm. June 2014"
+
+## Example
+
+```rust
+use jch;
+
+let key = 5u64;
+let num_buckets = 1024i32;
+println!("{}", jch::hash(key, num_buckets));
+```
