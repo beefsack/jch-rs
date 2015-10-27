@@ -1,0 +1,10 @@
+[package]
+name = "jch"
+version = "0.1.0"
+authors = ["Michael Alexander <beefsack@gmail.com>"]
+description = "Jump Consistent Hash for Rust."
+homepage = "https://github.com/beefsack/jch-rs"
+repository = "https://github.com/beefsack/jch-rs.git"
+readme = "README.md"
+keywords = ["hash"]
+license = "MIT"
